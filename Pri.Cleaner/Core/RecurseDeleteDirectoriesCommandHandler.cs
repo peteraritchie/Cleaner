@@ -26,11 +26,12 @@ public class RecurseDeleteDirectoriesCommandHandler(
 		{
 			logger.LogInformation("Deleting directory {FullName}", directory.FullName);
 
-			directory.Delete(recursive: true);
-
 			var size = directory
 				.EnumerateFiles("*.*", SearchOption.AllDirectories)
 				.Sum(e => e.Length);
+
+			directory.Delete(recursive: true);
+
 			processedDirectoryInfo[directory] = size;
 		}
 		catch (UnauthorizedAccessException ex)
