@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Pri.Cleaner": {
+      "commandName": "Project",
+      "commandLineArgs": "--dry-run --path c:\\users\\peter\\src\\client"
+    }
+  }
+}
