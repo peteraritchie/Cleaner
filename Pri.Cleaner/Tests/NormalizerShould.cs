@@ -1,5 +1,4 @@
-﻿using Pri.Cleaner;
-using Pri.Cleaner.Core;
+﻿using Pri.Cleaner.Core;
 
 namespace Tests;
 

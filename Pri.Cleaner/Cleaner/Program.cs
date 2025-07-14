@@ -23,8 +23,7 @@ internal static class Program
 		builder.Services.AddCommand()
 			.WithDescription("clean")
 			.WithOption<bool>("--dry-run", "Only display what will be done if true.")
-			.WithOption<DirectoryInfo?>("--path", "The path to the directory to recurse and clean.")
-				.AddAlias("-p")
+			.WithArgument<DirectoryInfo?>("path", "The path to the directory to recurse and clean.")
 				.WithDefault(new DirectoryInfo("."))
 			.WithHandler<CleanCommandHandler>();
         return builder.Build<RootCommand>().Invoke(args);

@@ -11,6 +11,7 @@ public class CleanCommandHandler(
 	EnumerateRecurseDeleteDirectoriesCommandHandler dryRunHandler)
 	: ICommandHandler<bool, DirectoryInfo?>
 {
+	/// <inheritdoc/>
 	public int Execute(bool isDryRun, DirectoryInfo? dir)
 	{
 		if (dir is null) return 1;
