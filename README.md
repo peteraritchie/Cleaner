@@ -28,7 +28,7 @@ Pri.Cleaner --dry-run
 
 
 
-## scaffolding
+## Scaffolding
 
 ```powershell
 md Pri.Cleaner
